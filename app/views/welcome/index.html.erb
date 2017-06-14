@@ -1,0 +1,8 @@
+<% unless user_signed_in? %>
+  <div class="jumbotron">
+     <h1 class="text-center">Welcome to Wikiikki</h1>
+     <div class="text-center">
+       <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+    </div>
+  </div>
+<% end %>
