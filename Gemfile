@@ -7,8 +7,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -37,7 +36,6 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  gem "rspec-rails"  # Added by Minh
 end
 
 group :development do
@@ -51,9 +49,11 @@ end
 
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 # Added by Minh
-group :test do
-  gem "capybara"
-end
+
+gem 'rspec-rails', :group => [:development, :test]
+gem 'sqlite3',     :group => [:development, :test]
+gem "capybara",    :group => [:test]
+gem 'pg',          :group => [:production]
 
 gem 'devise'
 gem "bootstrap-sass"
