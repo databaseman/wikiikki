@@ -58,6 +58,7 @@ end
 gem 'devise'
 gem "bootstrap-sass"
 gem "bootstrap-will_paginate"
+gem "pundit"
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
