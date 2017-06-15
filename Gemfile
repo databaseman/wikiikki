@@ -58,8 +58,14 @@ gem 'pg',          :group => [:production]
 gem 'devise'
 gem "bootstrap-sass"
 gem "bootstrap-will_paginate"
+gem 'will_paginate'
+gem 'stripe'
+gem 'redcarpet'
 gem "pundit"
 gem 'figaro'
+gem 'faker'
+gem 'net-ssh'
+gem 'font-awesome-rails'
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
