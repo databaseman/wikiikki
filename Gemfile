@@ -50,22 +50,23 @@ end
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 # Added by Minh
 
-gem 'rspec-rails', :group => [:development, :test]
-gem 'sqlite3',     :group => [:development, :test]
-gem "capybara",    :group => [:test]
-gem 'pg',          :group => [:production]
+gem 'rspec-rails',        :group => [:development, :test]
+gem 'sqlite3',            :group => [:development, :test]
+gem "capybara",           :group => [:test]
+gem "factory_girl_rails", :group => [:test]
+gem 'pg',                 :group => [:production]
 
-gem 'devise'
-gem "bootstrap-sass"
-gem "bootstrap-will_paginate"
-gem 'will_paginate'
-gem 'stripe'
-gem 'redcarpet'
-gem "pundit"
-gem 'figaro'
-gem 'faker'
-gem 'net-ssh'
-gem 'font-awesome-rails'
+gem 'devise'                  # Authorization
+gem "bootstrap-sass"          # formating
+gem "bootstrap-will_paginate" # formating
+gem 'will_paginate'           # formating
+gem 'stripe'                  # credit card handing
+gem 'redcarpet'               # markup html
+gem 'pundit'                  # Access control
+gem 'figaro'                  # environment variables hidden
+gem 'faker'                   # test data
+gem 'font-awesome-rails'      # formating
+gem "simple_form"             # formating
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
