@@ -6,6 +6,16 @@ class ApplicationController < ActionController::Base
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+  protected
+
+      # Added security when we added :name to devise form
+      def configure_permitted_parameters
+         devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :email, :password, :role) }
+         devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :current_password, :role) }
+     end
+
   private
 
     def user_not_authorized

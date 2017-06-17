@@ -4,6 +4,7 @@ RSpec.feature "Users can sign up" do
   scenario "when providing valid details" do
     visit "/"
     click_link "Sign up now!"
+    fill_in "Name", with: "exampleuser"
     fill_in "Email", with: "test@example.com"
     fill_in "user_password", with: "password"
     fill_in "Password confirmation", with: "password"
