@@ -56,7 +56,9 @@ gem "capybara",           :group => [:test]
 gem "factory_girl_rails", :group => [:test]
 gem 'pg',                 :group => [:production]
 
-gem 'devise'                  # Authorization
+gem 'devise'                    # Authorization
+gem 'devise_security_extension' # Extra security for devise
+gem 'rails_email_validator'     # email validator for devise
 gem "bootstrap-sass"          # formating
 gem "bootstrap-will_paginate" # formating
 gem 'will_paginate'           # formating

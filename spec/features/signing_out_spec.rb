@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.feature "Signed-in users can sign out" do
-  let!(:user) { User.create( email: Faker::Internet.email, password: 'password', password_confirmation: 'password') }
+  let!(:user) { User.create( name: 'user1', email: 'user1@yahoo.com', password: 'password', password_confirmation: 'password') }
 
   before do
     login_as(user)
