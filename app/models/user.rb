@@ -7,11 +7,11 @@ class User < ActiveRecord::Base
 
 # Devise already does its own validation.
 # These are for testing/rspec and new attributes like name and role
-#  validates :name,  presence: true, length: { in: 1..50 }
+  validates :name,  presence: true, length: { in: 1..50 }
 #  validates :email,  presence: true, uniqueness: true, length: { in: 5..150 },
 #            :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/ }
-#  validates :role,  presence: true
-#  validates_inclusion_of :role, :in => ['standard', 'premium', 'admin']
+  validates :role,  presence: true
+  validates_inclusion_of :role, :in => ['standard', 'premium', 'admin']
 #  validates :password,  presence: true, length: { in: 8..128 }
 #  validate :password_complexity
 
