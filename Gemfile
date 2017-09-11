@@ -50,12 +50,13 @@ end
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 # Added by Minh
 
-gem 'rspec-rails', '~> 3.0',  :group => [:development, :test]
-gem 'shoulda',                :group => [:development, :test]
-gem 'sqlite3',                :group => [:development, :test]
-gem "capybara",               :group => [:test]
-gem "factory_girl_rails",     :group => [:test]
-gem 'pg',                     :group => [:production]
+gem 'rspec-rails', '~> 3.0',    :group => [:development, :test]
+gem 'rails-controller-testing', :group => [:development, :test]
+gem 'shoulda',                  :group => [:development, :test]
+gem 'sqlite3',                  :group => [:development, :test]
+gem "capybara",                 :group => [:test]
+gem "factory_girl_rails",       :group => [:test]
+gem 'pg',                       :group => [:production]
 
 gem 'devise'                    # Authorization
 gem 'devise_security_extension' # Extra security for devise
