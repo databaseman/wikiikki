@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 # Devise already does its own validation.
 # These are for new attributes like name and role
   validates :name,  presence: true, length: { in: 1..50 }
-  validates :role,  presence: true
+  #validates :role,  presence: true   #role will default to standard to start with. no need to enter
   enum role: [:standard, :premium, :admin]
   validates_inclusion_of :role, :in => [ standard, premium, admin ]
 

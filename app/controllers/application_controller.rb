@@ -12,8 +12,8 @@ class ApplicationController < ActionController::Base
 
       # Added security when we added :name to devise form
       def configure_permitted_parameters
-         devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :email, :password, :role) }
-         devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :current_password, :role) }
+         devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :email, :password, :password_confirmation, :role) }
+         devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :password_confirmation, :current_password, :role) }
      end
 
   private
