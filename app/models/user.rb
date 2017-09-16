@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   validates :name,  presence: true, length: { in: 1..50 }
   #validates :role,  presence: true   #role will default to standard to start with. no need to enter
   enum role: [:standard, :premium, :admin]
-  validates_inclusion_of :role, :in => [ standard, premium, admin ]
+  #validates_inclusion_of :role, :in => [ standard, premium, admin ]
 
 #  Already done via devise :secure_validatable
 #  validates :email,  presence: true, uniqueness: true, length: { in: 5..150 },
