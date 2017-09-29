@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   validates :name,  presence: true, length: { in: 1..50 }
   #validates :role,  presence: true   #role will default to standard to start with. no need to enter
   enum role: [:standard, :premium, :admin]
+  validates :password, presence: true, length: { minimum: 8 }, allow_blank: true #blank for when not changing password
   #validates_inclusion_of :role, :in => [ standard, premium, admin ]
 
 #  Already done via devise :secure_validatable
@@ -23,6 +24,6 @@ class User < ActiveRecord::Base
 #      end
 #  end
 # before_save { self.role ||= :standard }  already set at db level
-  before_save { self.email = email.downcase }
+  before_save { self.email = email.downcase if email.present? }
 
 end
